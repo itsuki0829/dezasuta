@@ -30,7 +30,7 @@ body{
 }
 
 .service-item{
-    /* background: #fff; */
+    background: #fff;
     border: 1px solid #ddd;
     width: 30%;
     box-sizing: border-box;}
@@ -52,16 +52,18 @@ body{
     font-size: 18px;
     margin:16px;
     color: #339999;
-    position:  relative;
-    padding-left: 20px;
+    /* position:  relative; */
+    /* padding-left: 20px; */
+    display: flex;
+    align-items: center;
 }
 
-.container h3 ::before {
+.container h3::before {
     content: "";
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     width: 8px;
-    height: 8px;
+    height: 26px;
     background-color: #339999;
     margin-right: 8px;
     vertical-align: middle;
