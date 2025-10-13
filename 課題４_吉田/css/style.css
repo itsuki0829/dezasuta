@@ -1,0 +1,128 @@
+    @charset "utf-8";
+    body{
+        background: #e8d9bf;
+    }
+    header{
+        position: relative;
+    }
+    .headder_slider img{
+        width: 100%;
+    }
+    
+    .header_wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 7% 0 3%;
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .header_logo{
+        width: 227px;
+    }
+
+    .pc_nav ul{
+        display:flex;
+        gap: 50px;
+        
+    }
+    .pc_nav ul li{
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+                       "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        width: 105px;
+        text-align: center;
+     }
+     
+
+     .section {
+        padding: 80px 0;
+        text-align: center;
+     }
+     .about-title img{
+        width: 200px;
+        margin-bottom: 40px;
+     }
+
+     .about p{
+        font-size:1rem;
+        line-height: 2;
+     }
+
+
+     .gallery-images img{
+        display: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+     }
+
+     /* .gallery-images img {
+        width:calc(20%-10px);
+        border-radius: 4px;
+        object-fit: cover;
+     } */
+     .event-box{
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 24px 30px;
+        text-align: left;
+     }
+
+     .event-list p{
+        margin-bottom: 10px;
+        line-height: 1.6;
+     }
+
+     /* .event-list p:nth-last-child{
+        margin-bottom: 0;
+     } */
+
+     .event-list span{
+        color: #666;
+        margin-right: 10px;
+        font-size: 0.9rem;
+        display: inline-block;
+        width:100px;
+     }
+
+     .access .access_map{
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+     }
+
+     .access iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+     }
+
+     .access_map iframe{
+        width: 100%;
+        height: 400px;
+        border: none;
+     }
+
+
+
+   
+
+
+   
+     
+
+     
+    
+
