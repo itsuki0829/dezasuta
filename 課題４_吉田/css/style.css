@@ -131,7 +131,7 @@
        font-size: 38px;
        color: #d30202;
        position: relative;
-       top: -20px;
+       top: -50px;
        padding: 5px 10px;
        font-weight: Medium;
        display: inline-block;
@@ -253,10 +253,18 @@
        color: #333;
     }
 
-    .footer-content {
-       text-align: center;
-       max-width: 600px;
+    .footer-box {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 40px;
+       max-width: 800px;
        margin: 0 auto;
+       padding: 40px 20px;
+    }
+
+    .footer-info {
+       text-align: left;
     }
 
     .footer-logo {
@@ -265,7 +273,7 @@
        margin-bottom: 20px;
     }
 
-    .footer-content p {
+    .footer-info p {
        margin: 8px 0;
        font-size: 16px;
        text-align: right;
