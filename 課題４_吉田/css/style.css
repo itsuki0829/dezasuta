@@ -72,7 +72,6 @@
     .sub-title p:nth-child(1) {
        font-size: 30px;
        margin-bottom: 30px;
-       white-space: nowrap;
     }
 
     .sub-title p:nth-child(2) {
@@ -84,55 +83,57 @@
 
     .sub-title p:nth-child(3) {
        line-height: 38px;
-       letter-spacing: 100%;
+       letter-spacing: 0.1em;
+       line-height: 1.65;
     }
 
     .about {
        display: flex;
-       padding: 80px 0;
+       padding: 80px 10px 0 10px;
        text-align: center;
        max-width: 1000px;
        margin: 0 auto;
        justify-content: space-between;
     }
 
+    .about-content {
+       width: 41%;
+    }
+
     .about p:nth-child(1) {
-       width: 400px;
        font-size: 44px;
        line-height: 1.4;
        text-align: left;
-       /* padding: 0 0 0 80px; */
     }
 
     .about p:nth-child(2) {
-       width: 410px;
        font-size: 16px;
        line-height: 1.6;
-       /* padding: 23px 0 0 80px; */
-       /* border-left: 87px; */
        text-align: left;
+       padding-top: 23px;
        /* white-space: nowrap; */
     }
 
     .about-title img {
-       width: 200px;
-       margin-bottom: 40px;
+       width: 272px;
+       margin: 47px 0 40px 0;
        display: flex;
        justify-content: flex-start;
        /* padding: 0 0 0 80px; */
     }
 
     .about>img {
-       width: 500px;
+       /* 画面幅を％で記述する
+      コンテンツ幅1000px画像が500px 500/1000=50% */
+       width: 50%;
        height: 560px;
-
        border-radius: 0 0 40px 0;
        object-fit: cover;
-
     }
 
     .menu-list {
        max-width: 1000px;
+       padding: 0 10px 0 10px;
        display: flex;
        position: relative;
        justify-content: space-between;
@@ -145,13 +146,17 @@
        color: #d30202;
        position: relative;
        top: -15px;
-       padding: 5px 10px;
+       /* padding: 5px 10px; */
        font-weight: Medium;
        display: inline-block;
+       font-weight: 100;
     }
 
     .menu-list p {
-       padding: 5px 0 0 0;
+       /* padding: 5px 0 0 0; */
+       font-size: 13px;
+       line-height: 1.47;
+
     }
 
     .menu-list img {
@@ -218,8 +223,14 @@
        background-color: #fff;
        padding: 24px 30px;
        text-align: center;
-       border: 2px solid #333;
+       border: 2px solid #4f260b;
        box-sizing: border-box;
+
+    }
+
+    .event-wrapper {
+       padding: 0 10px;
+       /* ← 外側に左右10pxの余白をつける */
     }
 
     .event-list {
@@ -230,7 +241,7 @@
     .event-list p {
        text-align: left;
        margin-bottom: 10px;
-       line-height: 1.6;
+       line-height: 1.95;
        margin: 8px 0;
        text-decoration: underline;
        white-space: nowrap;
@@ -246,9 +257,9 @@
     }
 
     .event-list span {
-       color: #666;
+       color: #4f260b;
        margin-right: 10px;
-       font-size: 0.9rem;
+       /* font-size: 0.9rem; */
        display: inline-block;
        width: 100px;
     }
@@ -291,7 +302,6 @@
 
     .footer-box {
        display: flex;
-       align-items: center;
        gap: 40px;
        max-width: 1000px;
        margin: 0 auto;
@@ -303,13 +313,13 @@
     }
 
     .footer-logo {
+       padding-top: 5px;
        max-width: 220px;
        height: auto;
-       margin-bottom: 20px;
+
     }
 
     .footer-info p {
-       margin: 8px 0;
        font-size: 20px;
        text-align: left;
        line-height: 1.95;
@@ -333,5 +343,10 @@
        .footer-info p {
           text-align: center;
           font-size: 14px;
+       }
+
+       .event-box {
+          margin: 0 10px;
+          max-width: calc(100% - 20px);
        }
     }
