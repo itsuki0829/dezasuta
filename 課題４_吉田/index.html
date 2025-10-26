@@ -15,7 +15,10 @@
     </a>
     <header>
         <div class="header_slider">
-            <img src="./images/pc_first-100.jpg" alt="店内の様子" />
+            <picture>
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                <img src="./images/pc_first-100.jpg" alt="店内の様子" />
+            </picture>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -30,10 +33,23 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
 
 
 
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </header>
     <div class="sub-title">
         <p>Have a happy day From a cup of coffee.</p>
@@ -42,7 +58,10 @@
             足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
     </div>
     <section class="about" id="about">
-        <img src="./images/pc_about-100.jpg" alt="about us">
+        <picture>
+            <source srcset="./images/about_us@2x-100.jpg" media="(max-width:767px)">
+            <img src="./images/pc_about-100.jpg" alt="about us">
+        </picture>
         <div class="about-content">
             <h2 class="about-title">
                 <img src="./images/about_us@2x.png" alt="about us イメージ画像">
@@ -52,6 +71,7 @@
                 <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                 </p>
             </div>
+        </div>
     </section>
 
     <section class="MENU" id="menu">
@@ -60,17 +80,26 @@
         </h2>
         <div class="menu-list">
             <div class="menu-item">
-                <img src="./images/pc_menu_drink-100.jpg">
+                <picture>
+                    <source srcset="./images/drink_sp@2x-100.jpg" alt="(max-width:767px)">
+                    <img src="./images/pc_menu_drink-100.jpg">
+                </picture>
                 <h3>Drink</h3>
                 <P>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</P>
             </div>
             <div class="menu-item">
-                <img src="./images/pc_menu_food-100.jpg">
+                <picture>
+                    <source srcset="./images/pc_menu_food-100.jpg" alt="(max-width:767px)">
+                    <img src="./images/pc_menu_food-100.jpg">
+                </picture>
                 <h3>Food</h3>
                 <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
             <div class="menu-item">
-                <img src="./images/pc_menu_sweets-100.jpg">
+                <picture>
+                    <source srcset="./images/cake_sp@2x-100.jpg" alt="(max-width:767px)">
+                    <img src="./images/pc_menu_sweets-100.jpg">
+                </picture>
                 <h3>Sweets</h3>
                 <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
             </div>
@@ -87,6 +116,7 @@
             <img src="./images/pc_gallary_03-100.jpg" alt="店内の様子２">
             <img src="./images/pc_gallary_02-100.jpg" alt="CAFE">
             <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート">
+
         </div>
     </section>
 
@@ -135,6 +165,18 @@
         </div>
         <p class="copyright">© 2021 DESIGN CAFE.</p>
     </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+
+            })
+
+
+        })
+    </script>
 </body>
 
 </html>

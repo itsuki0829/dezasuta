@@ -27,6 +27,7 @@
        transform: scale(1.1);
     }
 
+
     .headder_slider img {
        width: 100%;
     }
@@ -85,6 +86,7 @@
        line-height: 38px;
        letter-spacing: 0.1em;
        line-height: 1.65;
+       padding-top: 20px;
     }
 
     .about {
@@ -129,6 +131,10 @@
        height: 560px;
        border-radius: 0 0 40px 0;
        object-fit: cover;
+    }
+
+    .MENU {
+       margin-top: 80px;
     }
 
     .menu-list {
@@ -178,6 +184,10 @@
 
     .menu-item {
        width: 30%;
+    }
+
+    .gallery {
+       margin: 35px;
     }
 
 
@@ -332,21 +342,204 @@
 
     }
 
-    @media screen and (max-width: 768px) {
-       .footer-box {
+    /* 
+    スマホ版メニュー */
+
+    .sp_nav,
+    .sp_btn {
+       display: none;
+
+    }
+
+    @media screen and (max-width: 1100px) {
+
+       .sub-title p:nth-child(1) {
+          font-size: 17px;
+       }
+
+       .sub-title p:nth-child(2) {
+          font-size: 40px;
+       }
+
+       .pc_nav {
+          display: none;
+       }
+
+       .sp_btn {
+          display: block;
+          height: 23px;
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 25px;
+          z-index: 2;
+
+       }
+
+       .sp_btn span {
+          display: block;
+          width: 33px;
+          height: 3px;
+          background: #fff;
+          border-radius: 2px;
+          /* 位置の調整 */
+          position: relative;
+          top: 10px;
+          /* sは秒数 */
+          transition: 0.3s;
+       }
+
+       .sp_btn span::before,
+       .sp_btn span::after {
+          content: "";
+          display: block;
+          width: 33px;
+          height: 3px;
+          background: #fff;
+          border-radius: 2px;
+          /* 位置の調整 */
+          position: absolute;
+          transition: 0.3s;
+
+       }
+
+       .sp_btn span::before {
+          bottom: 10px;
+       }
+
+       .sp_btn span::after {
+          top: 10px;
+       }
+
+       /* バツ印 */
+       .sp_btn.open span {
+          /* 透明に指定 */
+          background: transparent;
+       }
+
+       .sp_btn.open span::before {
+          bottom: 0;
+          transform: rotate(45deg);
+       }
+
+       .sp_btn.open span::after {
+          top: 0;
+          transform: rotate(-45deg);
+       }
+
+       /* メニューの見た目 */
+       .sp_nav {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          /* 0.8は透過度 */
+          background: rgba(0, 0, 0, 0.8);
+          /* 重なり具合の調整 */
+          z-index: 1;
+       }
+
+       .sp_nav ul {
+          display: flex;
           flex-direction: column;
           align-items: center;
-          text-align: center;
-          gap: 20px;
+          justify-content: center;
+          height: 100%;
+          gap: 40px;
+
        }
 
-       .footer-info p {
-          text-align: center;
-          font-size: 14px;
+       .sp_nav ul li {
+          color: #fff;
+          font-size: 18px;
+          font-weight: bold;
+          font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+             "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+
+
        }
 
-       .event-box {
-          margin: 0 10px;
-          max-width: calc(100% - 20px);
+    }
+
+    /* スマホ用（767px以下） */
+    @media screen and (max-width: 767px) {
+       .sub-title p:nth-child(2) {
+          font-size: 36px;
+          line-height: 1.5;
        }
+
+       .sub-title p:nth-child(3) {
+          font-size: 16px;
+          line-height: 1.8;
+          margin-bottom: 10px;
+          padding: 0 15px;
+          text-align: center;
+       }
+
+       .about {
+          flex-direction: column;
+          /* align-items: center; */
+          display: flex;
+       }
+
+       .about-title {
+          order: 1;
+       }
+
+       .about-img {
+          order: 2;
+          width: 100%;
+
+       }
+
+       .about_us {
+          order: 3;
+          width: 90%;
+          text-align: left;
+       }
+
+       .about p:nth-child(1) {
+          font-size: 36px;
+          margin: 0;
+          padding: 0;
+       }
+
+       .menu-list {
+          flex-direction: column;
+          align-items: center;
+       }
+
+       .menu-item {
+          width: 90%;
+          margin-bottom: 60px;
+       }
+
+       .event-list p {
+          text-align: left;
+          margin: 0 auto;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 90%;
+          max-width: 300px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+       }
+
+       .event-list span {
+          display: block;
+          text-decoration: none;
+       }
+
+       .footer-box {
+          flex-direction: column;
+          text-align: left;
+       }
+
+       .page-top img {
+          width: 100px;
+          height: 100px;
+       }
+
+
     }

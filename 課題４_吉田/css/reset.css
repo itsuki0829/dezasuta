@@ -46,3 +46,7 @@ img {
   vertical-align: bottom;
   border: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
