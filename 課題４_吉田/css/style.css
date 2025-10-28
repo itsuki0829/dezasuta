@@ -98,6 +98,7 @@
        justify-content: space-between;
     }
 
+
     .about-content {
        width: 41%;
     }
@@ -124,11 +125,11 @@
        /* padding: 0 0 0 80px; */
     }
 
-    .about>img {
+    .about-img img {
        /* 画面幅を％で記述する
       コンテンツ幅1000px画像が500px 500/1000=50% */
        width: 50%;
-       height: 560px;
+       height: auto;
        border-radius: 0 0 40px 0;
        object-fit: cover;
     }
@@ -187,7 +188,7 @@
     }
 
     .gallery {
-       margin: 35px;
+       margin: 85px 0 0 0;
     }
 
 
@@ -201,13 +202,14 @@
     .gallery-title img {
        width: 245px;
        height: auto;
-       padding: 38px 4px 0 0;
+       padding: 0 0 5px0;
        box-sizing: border-box;
     }
 
     .gallery-images {
-       display: flex;
+       /* display: flex; */
        margin: 0 auto;
+       position: relative;
     }
 
     .gallery-images img {
@@ -238,13 +240,13 @@
 
     }
 
-    .event-wrapper {
+    .event-container {
        padding: 0 10px;
        /* ← 外側に左右10pxの余白をつける */
     }
 
     .event-list {
-       display: inline-block;
+       display: block;
        text-align: left;
     }
 
@@ -253,7 +255,7 @@
        margin-bottom: 10px;
        line-height: 1.95;
        margin: 8px 0;
-       text-decoration: underline;
+       /* text-decoration: underline; */
        white-space: nowrap;
        font-size: 23px;
     }
@@ -266,12 +268,16 @@
        padding: 68px 0 37px 0;
     }
 
-    .event-list span {
+    .event-list p span:nth-child(1) {
        color: #4f260b;
        margin-right: 10px;
        /* font-size: 0.9rem; */
        display: inline-block;
        width: 100px;
+    }
+
+    .event-list p span:nth-child(2) {
+       text-decoration: underline;
     }
 
     .access .access_map {
@@ -353,12 +359,16 @@
 
     @media screen and (max-width: 1100px) {
 
-       .sub-title p:nth-child(1) {
-          font-size: 17px;
+       .sub-title p:nth-child(2) {
+          font-size: 67px;
        }
 
-       .sub-title p:nth-child(2) {
-          font-size: 40px;
+       .sub-title p:nth-child(3) {
+          font-size: 20px;
+          line-height: 1.8;
+          margin-bottom: 10px;
+          padding: 0 15px;
+          text-align: center;
        }
 
        .pc_nav {
@@ -464,23 +474,15 @@
 
     /* スマホ用（767px以下） */
     @media screen and (max-width: 767px) {
-       .sub-title p:nth-child(2) {
-          font-size: 36px;
-          line-height: 1.5;
-       }
-
-       .sub-title p:nth-child(3) {
-          font-size: 16px;
-          line-height: 1.8;
-          margin-bottom: 10px;
-          padding: 0 15px;
-          text-align: center;
-       }
 
        .about {
           flex-direction: column;
           /* align-items: center; */
           display: flex;
+       }
+
+       .about-content {
+          display: contents;
        }
 
        .about-title {
@@ -520,26 +522,84 @@
           margin: 0 auto;
           flex-direction: column;
           align-items: flex-start;
-          width: 90%;
+          /* width: 90%; */
           max-width: 300px;
           overflow: hidden;
           text-overflow: ellipsis;
        }
 
-       .event-list span {
+       .event-list p span:nth-child(1) {
           display: block;
-          text-decoration: none;
+          /* text-decoration: none; */
        }
 
        .footer-box {
+          padding: 40px 20px;
           flex-direction: column;
           text-align: left;
        }
 
+
+       .page-top {
+          position: fixed;
+          right: 20px;
+          bottom: 20px;
+          z-index: 1000;
+       }
+
        .page-top img {
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
+       }
+
+       .copyright {
+          text-align: center;
+          padding: 20px 10px 40px;
+
        }
 
 
+
+
+    }
+
+    /* スライダー */
+    .slick-dots {
+       bottom: 20px;
+    }
+
+    .slick-dots li.slick-active button:before,
+    .slick-dots li.button:before {
+       color: #fff;
+    }
+
+    .slick-dotted.slick-slider {
+       margin-bottom: 0;
+    }
+
+    .slick-prev {
+       left: 25px
+    }
+
+    /* ギャラリーの矢印 */
+    .gallery-images .slick-prev::before,
+    .gallery-images .slick-next::before {
+       content: '';
+       display: block;
+       width: 10px;
+       height: 10px;
+       border-top: 2px solid #333;
+       border-right: 2px solid #333;
+       transform: rotate(-135deg);
+       margin: auto;
+    }
+
+    /* 左矢印（←） */
+    .gallery-images .slick-prev::before {
+       transform: rotate(-135deg);
+    }
+
+    /* 右矢印（→） */
+    .gallery-images .slick-next::before {
+       transform: rotate(45deg);
     }
