@@ -107,13 +107,14 @@
        font-size: 44px;
        line-height: 1.4;
        text-align: left;
+       padding-top: 30px;
     }
 
     .about p:nth-child(2) {
        font-size: 16px;
        line-height: 1.6;
        text-align: left;
-       padding-top: 23px;
+       padding-top: 26px;
        /* white-space: nowrap; */
     }
 
@@ -125,11 +126,14 @@
        /* padding: 0 0 0 80px; */
     }
 
+    .about-img {
+       width: 50%;
+    }
+
     .about-img img {
        /* 画面幅を％で記述する
       コンテンツ幅1000px画像が500px 500/1000=50% */
-       width: 50%;
-       height: auto;
+       height: 560px;
        border-radius: 0 0 40px 0;
        object-fit: cover;
     }
@@ -475,6 +479,18 @@
     /* スマホ用（767px以下） */
     @media screen and (max-width: 767px) {
 
+       .sub-title p:nth-child(1) {
+          font-size: 20px;
+       }
+
+       .sub-title p:nth-child(2) {
+          font-size: 45px;
+       }
+
+       .sub-title p:nth-child(3) {
+          font-size: 18px;
+       }
+
        .about {
           flex-direction: column;
           /* align-items: center; */
@@ -489,9 +505,23 @@
           order: 1;
        }
 
+       .about-title img {
+          display: inline-block !important;
+          margin: 0 auto !important;
+          margin: 0 auto;
+       }
+
        .about-img {
           order: 2;
           width: 100%;
+
+       }
+
+       .about-img img {
+          width: 100%;
+          height: auto;
+          border-radius: 0 !important;
+
 
        }
 
@@ -504,7 +534,16 @@
        .about p:nth-child(1) {
           font-size: 36px;
           margin: 0;
-          padding: 0;
+       }
+
+       .about p:nth-child(2) {
+          font-size: 16px;
+          line-height: 1.6;
+          text-align: left;
+       }
+
+       .MENU {
+          padding: 0 30px;
        }
 
        .menu-list {
@@ -523,7 +562,7 @@
           flex-direction: column;
           align-items: flex-start;
           /* width: 90%; */
-          max-width: 300px;
+          /* max-width: 300px; */
           overflow: hidden;
           text-overflow: ellipsis;
        }
@@ -578,7 +617,13 @@
     }
 
     .slick-prev {
-       left: 25px
+       left: 25%;
+       z-index: 100;
+    }
+
+    .slick-next {
+       right: 25%;
+       z-index: 100;
     }
 
     /* ギャラリーの矢印 */
@@ -588,15 +633,17 @@
        display: block;
        width: 10px;
        height: 10px;
-       border-top: 2px solid #333;
-       border-right: 2px solid #333;
+       border-top: 2px solid #fff;
+       border-right: 2px solid #fff;
        transform: rotate(-135deg);
        margin: auto;
+       z-index: 10;
     }
 
     /* 左矢印（←） */
     .gallery-images .slick-prev::before {
        transform: rotate(-135deg);
+
     }
 
     /* 右矢印（→） */
