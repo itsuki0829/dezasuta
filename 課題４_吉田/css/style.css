@@ -144,7 +144,6 @@
 
     .menu-list {
        max-width: 1000px;
-       padding: 0 10px 0 10px;
        display: flex;
        position: relative;
        justify-content: space-between;
@@ -361,6 +360,14 @@
 
     }
 
+    .both-br {
+       display: inline;
+    }
+
+    .sp-br {
+       display: none;
+    }
+
     @media screen and (max-width: 1100px) {
 
        .sub-title p:nth-child(2) {
@@ -470,8 +477,6 @@
           font-weight: bold;
           font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
              "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-
-
        }
 
     }
@@ -479,22 +484,31 @@
     /* スマホ用（767px以下） */
     @media screen and (max-width: 767px) {
 
+       .sp-br {
+          display: inline;
+       }
+
+
        .sub-title p:nth-child(1) {
           font-size: 20px;
        }
 
        .sub-title p:nth-child(2) {
-          font-size: 45px;
+          font-size: 38px;
+          letter-spacing: 0.1em;
+          padding-bottom: 12px;
        }
 
        .sub-title p:nth-child(3) {
-          font-size: 18px;
+          font-size: 16px;
        }
 
        .about {
           flex-direction: column;
           /* align-items: center; */
           display: flex;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
        }
 
        .about-content {
@@ -509,11 +523,14 @@
           display: inline-block !important;
           margin: 0 auto !important;
           margin: 0 auto;
+          width: 160px;
+          height: auto;
        }
 
        .about-img {
           order: 2;
           width: 100%;
+          margin-top: 10px;
 
        }
 
@@ -521,8 +538,6 @@
           width: 100%;
           height: auto;
           border-radius: 0 !important;
-
-
        }
 
        .about_us {
@@ -532,6 +547,7 @@
        }
 
        .about p:nth-child(1) {
+          padding: 35px 10px 19px 10px;
           font-size: 36px;
           margin: 0;
        }
@@ -540,20 +556,48 @@
           font-size: 16px;
           line-height: 1.6;
           text-align: left;
+          padding: 0 10px;
        }
 
-       .MENU {
-          padding: 0 30px;
+       .menu-title img {
+          width: 87px;
+          height: auto;
        }
 
        .menu-list {
           flex-direction: column;
           align-items: center;
+          padding-left: 30px;
+          padding-right: 30px;
+          margin: 0 auto;
+       }
+
+       .menu-list p {
+          font-size: 17px;
+       }
+
+       .menu-list {
+          width: 300px;
+          height: auto;
        }
 
        .menu-item {
           width: 90%;
           margin-bottom: 60px;
+       }
+
+       .gallery-title img {
+          width: 142px;
+          height: auto;
+          padding-top: 42px;
+          padding-bottom: 1px;
+       }
+
+       .event-title img {
+          width: 100px;
+          height: auto;
+          padding-top: 24px;
+          padding-bottom: 15px;
        }
 
        .event-list p {
@@ -565,11 +609,30 @@
           /* max-width: 300px; */
           overflow: hidden;
           text-overflow: ellipsis;
+          font-size: 16px;
        }
 
        .event-list p span:nth-child(1) {
           display: block;
+          font-size: 16px;
           /* text-decoration: none; */
+       }
+
+       .access-title img {
+          width: 124px;
+          height: 0 auto;
+          padding-top: 26px;
+          padding-bottom: 5px;
+       }
+
+       .access .access_map {
+          width: 400%;
+          height: auto;
+       }
+
+       .footer-logo {
+          width: 265px;
+          height: auto;
        }
 
        .footer-box {
@@ -594,11 +657,19 @@
        .copyright {
           text-align: center;
           padding: 20px 10px 40px;
-
        }
 
+       .gallery-images .slick-prev {
+          left: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+       }
 
-
+       .gallery-images .slick-next {
+          right: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+       }
 
     }
 
@@ -631,8 +702,8 @@
     .gallery-images .slick-next::before {
        content: '';
        display: block;
-       width: 10px;
-       height: 10px;
+       width: 27px;
+       height: 27px;
        border-top: 2px solid #fff;
        border-right: 2px solid #fff;
        transform: rotate(-135deg);
