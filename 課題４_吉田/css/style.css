@@ -249,7 +249,7 @@
     }
 
     .event-list {
-       display: block;
+       display: inline-block;
        text-align: left;
     }
 
@@ -577,15 +577,11 @@
           padding-left: 30px;
           padding-right: 30px;
           margin: 0 auto;
+          gap: 60px;
        }
 
        .menu-list p {
           font-size: 17px;
-       }
-
-       .menu-list {
-          /* width: 300px; */
-          height: auto;
        }
 
        .menu-item {
@@ -607,7 +603,12 @@
           padding-bottom: 15px;
        }
 
+       .event-list {
+          display: block;
+       }
+
        .event-list p {
+          gap: 24px;
           text-align: left;
           margin: 0 auto;
           flex-direction: column;
@@ -617,12 +618,21 @@
           overflow: hidden;
           text-overflow: ellipsis;
           font-size: 16px;
+          margin-bottom: 24px;
        }
 
        .event-list p span:nth-child(1) {
           display: block;
           font-size: 16px;
           /* text-decoration: none; */
+       }
+
+       .event-list p:nth-child(3) {
+          margin-bottom: 0;
+       }
+
+       .event-box {
+          padding: 19px 30px;
        }
 
        .access-title img {
@@ -638,7 +648,6 @@
        }
 
        .footer-box {
-          width: 265px;
           height: auto;
           padding: 40px 20px;
           flex-direction: column;
@@ -695,7 +704,7 @@
     }
 
     .slick-dots li.slick-active button:before,
-    .slick-dots li.button:before {
+    .slick-dots li button:before {
        color: #fff;
     }
 
