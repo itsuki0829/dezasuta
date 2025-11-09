@@ -123,22 +123,29 @@
                     <img src="./images/gallery@2x.png" alt="GALLERY">
                 </h2>
                 <div class="gallery-images">
-                    <img src="./images/pc_gallary_05-100.jpg" alt="店内の様子1">
-                    <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
-                    <img src="./images/pc_gallary_03-100.jpg" alt="店内の様子２">
-                    <img src="./images/pc_gallary_02-100.jpg" alt="CAFE">
-                    <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート">
-                    <img src="./images/pc_gallary_05-100.jpg" alt="店内の様子1">
-                    <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
-                    <img src="./images/pc_gallary_03-100.jpg" alt="店内の様子２">
-                    <img src="./images/pc_gallary_02-100.jpg" alt="CAFE">
-                    <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート">
-
+                    <img src="./images/pc_gallary_05-100.jpg" data-modal="./images/pc_gallary_05-100.jpg" alt="店内の様子1">
+                    <img src="./images/pc_gallary_04-100.jpg" data-modal="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                    <img src="./images/pc_gallary_03-100.jpg" data-modal="./images/pc_gallary_03-100.jpg" alt="店内の様子２">
+                    <img src="./images/pc_gallary_02-100.jpg" data-modal="./images/pc_gallary_02-100.jpg" alt="CAFE">
+                    <img src="./images/pc_gallary_01-100.jpg" data-modal="./images/pc_gallary_01-100.jpg" alt="ラテアート">
+                    <img src="./images/pc_gallary_05-100.jpg" data-modal="./images/pc_gallary_05-100.jpg" alt="店内の様子1">
+                    <img src="./images/pc_gallary_04-100.jpg" data-modal="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                    <img src="./images/pc_gallary_03-100.jpg" data-modal="./images/pc_gallary_03-100.jpg" alt="店内の様子２">
+                    <img src="./images/pc_gallary_02-100.jpg" data-modal="./images/pc_gallary_02-100.jpg" alt="CAFE">
+                    <img src="./images/pc_gallary_01-100.jpg" data-modal="./images/pc_gallary_01-100.jpg" alt="ラテアート">
                 </div>
             </section>
 
+            <!-- モーダルボタン -->
+            <div class="modal">
+                <div class="modal-bg"></div>
+                <div class="modal-content">
+                    <img src="" alt="" id="modal-img">
+                    <button class="modal-close">×</button>
+                </div>
+            </div>
 
-            <section class="event" id="event">
+            <section class=" event" id="event">
                 <h2 class="event-title">
                     <img src="./images/event@2x.png" alt="EVENT">
                 </h2>
@@ -147,7 +154,7 @@
                         <div class="event-list">
                             <p>
                                 <span>2020.06.23</span>
-                                <span>月はイベント出店のため0/0お休みします</span>
+                                <span>7月はイベント出店のため0/0お休みします</span>
                             </p>
                             <p>
                                 <span>2020.03.15</span>
@@ -222,6 +229,17 @@
                         ]
                     })
 
+                });
+                // ギャラリー画像クリックでモーダル表示
+                $('.gallery-images img').on('click', function () {
+                    const imgSrc = $(this).data('modal'); // data-modal属性から画像パス取得
+                    $('#modal-img').attr('src', imgSrc);  // モーダル内の画像にセット
+                    $('.modal').fadeIn();                 // モーダル表示
+                });
+
+                // モーダル閉じる処理
+                $('.modal-bg, .modal-close').on('click', function () {
+                    $('.modal').fadeOut();                // モーダル非表示
                 });
             </script>
 </body>
